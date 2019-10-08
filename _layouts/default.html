@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% if page.title %}{{ page.title }}{% endif %}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+	<link rel="icon" ttype="image/x-icon" href="{{ site.baseurl }}img/favicon.ico">
+	<link rel="stylesheet" href="{{ site.baseurl }}css/base.css">
+</head>
+
+<body>
+	<header>
+		<nav class="main-nav main-nav--header">
+			<ul class="main-nav__menu-list main-nav__menu-list--header">
+				<li class="main-nav__logo">
+					<a href="/" class="main-nav__link main-nav__link--logo js-main-logo">
+						<img src="{{ site.baseurl }}img/logo.svg" alt="Jot.B">
+					</a>
+				</li>
+				<li><a href="#ourOffer" class="main-nav__link">Projekty</a></li>
+				<li><a href="#contact" class="main-nav__link">Kontakt</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="main">
+		<nav class="main__nav-scroll">
+			<ul id="js-scroll-nav" class="main__nav-scroll-list"></ul>
+		</nav>
+		<section class="main__content">
+			{{ content }}
+		</section>
+	</main>
+	<footer class="main-footer">
+		<nav>
+			<ul class="main-footer__menu-list">
+				<li class="main-footer__item">
+					<a href="#contact" class="main-footer__icon main-footer__adress" title="Kontakt"></a>
+				</li>
+				<li class="main-footer__item">
+					<a href="#" class="main-footer__icon main-footer__facebook" title="Facebook"></a>
+				</li>
+			</ul>
+		</nav>
+	</footer>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="{{ site.baseurl }}js_dist/main.bundle.js"></script>
+</body>
+</html>

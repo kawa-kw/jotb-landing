@@ -1,0 +1,39 @@
+.section-offer
+	&__list
+		margin: rem-calc(30) auto
+
+		+media(s)
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+			width: rem-calc(400)
+
+		+media(m, 100px)
+			width: rem-calc(800)
+
+	&__list-item
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		width: rem-calc(150)
+		height: rem-calc(150)
+		border: 2px solid $color-accent
+		border-radius: rem-calc(5)
+		margin: 4rem 1rem
+
+		+media(s)
+			margin: 2rem 1rem
+
+	&__icon
+		+center(-40px, 50%, -50%, 0)
+		display: flex
+		justify-content: center
+		align-items: center
+		width: rem-calc(80)
+		height: rem-calc(80)
+		border-radius: 100%
+		background-color: $color-accent
+
+		&::after
+			+fa-icon($fa-cogs, 21px, $color-black)

@@ -1,0 +1,61 @@
+.main-nav
+	&--header
+		position: fixed
+		top: 0
+		width: 100%
+		padding: 1rem
+		z-index: 101
+
+	&__menu-list--header
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		.main-nav__logo
+			flex-grow: 1
+
+	&__menu-list > *
+		margin: rem-calc(10)
+
+	&__link
+		+font($font-size-short, 700)
+		display: block
+
+		&--logo
+			+transition($duration: .8s)
+			+center($top: 10%, $left: 10%, $transformX: 0, $transformY: 0)
+			position: fixed
+			width: rem-calc(160)
+
+			+media(m)
+				width: rem-calc(200)
+
+		&.logo-on-top
+			width: rem-calc(120)
+			top: rem-calc(15)
+			left: rem-calc(15)
+
+	&--footer
+		position: relative
+		display: flex
+		flex-direction: column-reverse
+		width: 100%
+		max-width: rem-calc(1000)
+		padding-top: rem-calc(30)
+		border-top: 1px solid rgba($color-white, .4)
+		z-index: 101
+
+		+media(s)
+			flex-direction: row
+			align-items: center
+
+		.main-nav
+			&__menu-list
+				margin-right: rem-calc(50)
+
+			&__logo
+				width: rem-calc(100)
+				margin-right: rem-calc(50)
+
+			&__address *
+				+font($font-size-short)

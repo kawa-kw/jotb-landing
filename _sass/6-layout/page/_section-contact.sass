@@ -1,0 +1,22 @@
+.section-contact
+	.section
+		&__content
+			flex-grow: 1
+			flex-wrap: wrap
+			display: flex
+			align-items: flex-end
+			justify-content: center
+
+		&__title
+			width: 100%
+			text-align: center
+
+			+media(s, 100px)
+				margin-bottom: rem-calc(-100)
+
+	&__contact
+		+font($font-size-header, 700)
+		display: block
+		width: 100%
+		margin-bottom: rem-calc(30)
+		text-align: center

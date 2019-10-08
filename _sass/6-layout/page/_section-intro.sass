@@ -1,0 +1,14 @@
+.section-intro
+	&::after
+		display: none
+
+	&__header
+		+font($font-size-header-main, $font-bold-weight, 1.6)
+		padding: rem-calc(20) rem-calc(40)
+
+		+media(s)
+			margin: 0 rem-calc(60)
+
+		+media(m)
+			max-width: rem-calc(500)
+			text-align: right

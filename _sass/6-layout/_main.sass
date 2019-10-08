@@ -1,0 +1,79 @@
+.main
+	display: flex
+	width: 100vw
+	min-height: 100vh
+	position: relative
+	//background-image: url(../img/gplay.png)
+
+	&__nav-scroll
+		position: fixed
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		height: 100vh
+		width: $width-nav-scroll-mobile
+		z-index: 100
+
+		+media(s)
+			width: $width-nav-scroll-desktop
+
+	&__nav-scroll-list
+		position: relative
+		text-align: center
+
+		&::before
+			+fa-icon($fa-angle-up, 21px, $color-accent)
+
+		&::after
+			+fa-icon($fa-angle-down, 21px, $color-accent)
+
+	&__nav-scroll-element
+		+transition
+		position: relative
+		width: rem-calc(20)
+		height: rem-calc(20)
+		margin: rem-calc(30) 0
+		border-radius: 100%
+
+		&::after
+			+transition
+			content: ''
+			display: block
+			position: absolute
+			width: rem-calc(5)
+			height: rem-calc(5)
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			border-radius: 100%
+			pointer-events: none
+			background-color: $color-accent
+
+		&:hover
+			border: 1px solid $color-accent
+
+			span
+				left: rem-calc(10)
+				opacity: 1
+				pointer-events: all
+
+		a
+			display: block
+			height: 100%
+
+	&__nav-scroll-element-name
+		+font($font-size-short)
+		+transition
+		display: block
+		width: rem-calc(150)
+		position: absolute
+		top: 50%
+		left: rem-calc(-10)
+		transform: translateY(-50%)
+		padding: rem-calc(15) 0 rem-calc(15) rem-calc(20)
+		opacity: 0
+		pointer-events: none
+		text-align: left
+
+	&__content
+		flex-grow: 1
