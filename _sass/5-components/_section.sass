@@ -7,7 +7,7 @@
 	align-items: center
 	width: 100%
 	min-height: 100vh
-	padding: 1rem 1rem 1rem $width-nav-scroll-mobile + 1rem
+	padding: 1rem
 
 	&__title
 		position: relative
@@ -28,13 +28,28 @@
 			flex-direction: row
 			justify-content: space-between
 
-	&__img
-		width: rem-calc(300)
-		margin: rem-calc(30) rem-calc(20)
+	&__text
+		position: relative
+		text-indent: rem-calc(70)
+		max-width: rem-calc(350)
+		padding: rem-calc(10) 0
 
-		+media(s, 200px)
-			width: rem-calc(400)
-			margin: rem-calc(40)
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: rem-calc(24)
+			left: 0
+			width: rem-calc(60)
+			height: rem-calc(2)
+			border-radius: rem-calc(2)
+			background-color: $color-black
+
+		+media(s)
+			margin-left: rem-calc(60)
+
+		+media(m)
+			margin-left: 0
 
 	+media(s)
-		padding-left: $width-nav-scroll-desktop + 1rem
+		padding-right: $width-nav-scroll-desktop + 1rem

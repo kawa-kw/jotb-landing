@@ -1,14 +1,19 @@
 .section-intro
-	&::after
-		display: none
+	align-items: flex-start
+	padding-top: rem-calc(200)
 
 	&__header
-		+font($font-size-header-main, $font-bold-weight, 1.6)
-		padding: rem-calc(20) rem-calc(40)
+		+font($font-size-header-main, $font-bold-weight, 1.2)
+		margin-bottom: rem-calc(30)
 
 		+media(s)
-			margin: 0 rem-calc(60)
+			margin: 0 rem-calc(60) rem-calc(30)
 
 		+media(m)
-			max-width: rem-calc(500)
+			max-width: 40%
 			text-align: right
+
+	+media(m)
+		display: flex
+		flex-direction: row
+		align-items: center

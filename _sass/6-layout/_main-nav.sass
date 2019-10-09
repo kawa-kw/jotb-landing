@@ -8,54 +8,31 @@
 
 	&__menu-list--header
 		display: flex
-		justify-content: space-between
+		justify-content: center
 		align-items: center
 
 		.main-nav__logo
-			flex-grow: 1
+			margin: 0 rem-calc(70)
+
+			+media(m)
+				margin: 0 rem-calc(150)
 
 	&__menu-list > *
 		margin: rem-calc(10)
 
 	&__link
-		+font($font-size-short, 700)
+		+font($font-size-text, 700)
 		display: block
 
 		&--logo
 			+transition($duration: .8s)
-			+center($top: 10%, $left: 10%, $transformX: 0, $transformY: 0)
+			+center($top: rem-calc(60), $left: 50%, $transformX: -50%, $transformY: 0)
 			position: fixed
 			width: rem-calc(160)
 
 			+media(m)
-				width: rem-calc(200)
+				width: rem-calc(180)
 
 		&.logo-on-top
-			width: rem-calc(120)
+			width: rem-calc(100)
 			top: rem-calc(15)
-			left: rem-calc(15)
-
-	&--footer
-		position: relative
-		display: flex
-		flex-direction: column-reverse
-		width: 100%
-		max-width: rem-calc(1000)
-		padding-top: rem-calc(30)
-		border-top: 1px solid rgba($color-white, .4)
-		z-index: 101
-
-		+media(s)
-			flex-direction: row
-			align-items: center
-
-		.main-nav
-			&__menu-list
-				margin-right: rem-calc(50)
-
-			&__logo
-				width: rem-calc(100)
-				margin-right: rem-calc(50)
-
-			&__address *
-				+font($font-size-short)

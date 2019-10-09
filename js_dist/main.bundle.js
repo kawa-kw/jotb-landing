@@ -69,8 +69,8 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__displayScrollNavigation__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__displayScrollNavigation__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__ = __webpack_require__(2);
 
 
 
@@ -81,8 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }, false);
 
 /***/ }),
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -115,7 +114,7 @@ let displayScrollNavigation = () => {
 /* harmony default export */ __webpack_exports__["a"] = (displayScrollNavigation);
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
