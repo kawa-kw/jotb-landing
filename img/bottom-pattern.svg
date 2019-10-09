@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="3255px" height="436px" viewBox="0 0 3255 436" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>bottom-patern</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="78.7536505%" y1="49.7965897%" x2="45.2507803%" y2="50.3518482%" id="linearGradient-1">
+            <stop stop-color="#01A4B7" offset="0%"></stop>
+            <stop stop-color="#74066F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#09108C" stop-opacity="0.0817854021" offset="0%"></stop>
+            <stop stop-color="#960BAC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#037DA9" stop-opacity="0.479676573" offset="0%"></stop>
+            <stop stop-color="#4C2082" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(0.000000, -851.000000)">
+            <g id="bottom-patern" transform="translate(0.000000, 851.671009)">
+                <polygon id="Path-5" fill="url(#linearGradient-1)" opacity="0.712681362" points="254.035 1.48395593e-14 486.325 156.584993 979 96.7920844 1370 250.091103 1712.665 76.1556893 1960.14376 176.635386 2757.06872 76.1556893 3255 176.635386 3255 273.05093 0 273.05093"></polygon>
+                <polygon id="Path-6" fill="url(#linearGradient-2)" points="0 70.2725117 171 211.920198 370.795 -1.60613469e-14 877 248.777614 1250 19.1585058 1610.5 248.777614 1901.74114 70.2725117 2113 151.358616 2380.43517 27.981466 2552.18122 248.777614 2922.29373 70.2725117 3255 271.620791 3255 273.05093 0 271.620791"></polygon>
+                <path d="M0,146.223679 C0,146.223679 28.3333333,106.809608 85,27.981466 L858.31194,197.255245 L1521.355,65.6333723 L1917.70965,250.35945 L2518.83139,65.6333723 L3001.68369,211.920198 L3255,180.011273 L3255,273.05093 L0,273.05093 C0,188.499429 0,146.223679 0,146.223679 Z" id="Path-7" fill="url(#linearGradient-3)"></path>
+                <polygon id="Path-8" fill="#0C1E40" points="0 146.223679 228.5 273.05093 774.625 146.223679 1624.45109 273.05093 2633.82377 146.223679 3255 222.637581 3255 436 1298.15629 436 0 436"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

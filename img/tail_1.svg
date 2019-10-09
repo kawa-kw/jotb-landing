@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="833px" height="827px" viewBox="0 0 833 827" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="78.7536505%" y1="48.1340643%" x2="45.2507803%" y2="53.227595%" id="linearGradient-1">
+            <stop stop-color="#01A4B7" offset="0%"></stop>
+            <stop stop-color="#74066F" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#09108C" stop-opacity="0.0817854021" offset="0%"></stop>
+            <stop stop-color="#960BAC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#037DA9" stop-opacity="0.479676573" offset="0%"></stop>
+            <stop stop-color="#4C2082" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(4.000000, 0.000000)">
+            <rect id="Rectangle" fill-opacity="0.341428103" fill="#0C1E40" x="0" y="0" width="829" height="827"></rect>
+            <g id="bottom-patern" opacity="0.845331101">
+                <polygon id="Path-5" fill="url(#linearGradient-1)" opacity="0.712681362" points="254.035 1.31027092e-13 486.325 474.255076 979 293.157961 1370 757.460676 1712.665 230.655706 1960.14376 534.982483 2757.06872 230.655706 3255 534.982483 3255 827 0 827"></polygon>
+                <polygon id="Path-6" fill="url(#linearGradient-2)" points="0 212.837097 171 641.850969 370.795 3.74363119e-14 877 753.482461 1250 58.0261137 1610.5 753.482461 1901.74114 212.837097 2113 458.425744 2380.43517 84.7485574 2552.18122 753.482461 2922.29373 212.837097 3255 822.668483 3255 827 0 822.668483"></polygon>
+                <path d="M0,442.485969 C0,442.485969 28.3333333,322.990646 85,84 L858.31194,597.203137 L1521.355,198.152803 L1917.70965,758.204119 L2518.83139,198.152803 L3001.68369,641.664247 L3255,544.922975 L3255,827 L0,827 C0,570.657312 0,442.485969 0,442.485969 Z" id="Path-7" fill="url(#linearGradient-3)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
