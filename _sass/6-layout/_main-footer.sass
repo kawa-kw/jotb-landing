@@ -1,12 +1,18 @@
 .main-footer
 	position: fixed
 	bottom: 0
-	display: flex
-	justify-content: flex-end
-	align-items: center
 	width: 100%
 	padding: 0 1rem 1.2rem
 	z-index: 100
+
+	&__nav
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__copyright
+		+font(rem-calc(14))
+		color: $color-bg-main
 
 	&__menu-list
 		display: flex
