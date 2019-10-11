@@ -11,10 +11,9 @@
 		+media(s)
 			display: block
 			position: fixed
-			right: 0
+			left: rem-calc(20)
 			display: flex
 			align-items: center
-			justify-content: center
 			height: 100vh
 			width: $width-nav-scroll-desktop
 			z-index: 100
@@ -25,6 +24,8 @@
 
 	&__nav-scroll-element
 		+transition
+		display: flex
+		align-items: center
 		position: relative
 		width: rem-calc(40)
 		height: rem-calc(5)
@@ -33,30 +34,32 @@
 		background-color: $color-accent
 
 		&:hover
+			+transition
 			width: rem-calc(60)
 
 			span
-				right: rem-calc(10)
+				left: 0
 				opacity: 1
 				pointer-events: all
 
 		a
 			display: block
 			height: 100%
+			width: 100%
 
 	&__nav-scroll-element-name
-		+font($font-size-short)
+		+font($font-size-short, 700)
 		+transition
 		display: block
 		width: rem-calc(150)
 		position: absolute
 		top: 50%
-		right: rem-calc(-10)
+		left: rem-calc(-20)
 		transform: translateY(-50%)
-		padding: rem-calc(15) rem-calc(20) rem-calc(15) 0
+		padding: rem-calc(5) 0 rem-calc(5) rem-calc(80)
 		opacity: 0
 		pointer-events: none
-		text-align: right
+		text-align: left
 
 	&__content
 		flex-grow: 1

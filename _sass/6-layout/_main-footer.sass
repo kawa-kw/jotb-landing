@@ -28,3 +28,35 @@
 
 	&__facebook::after
 		+fa-icon($fa-facebook, $color: $color-bg-main)
+
+	&--full
+		position: relative
+		padding: rem-calc(80) 1rem
+		color: $color-grey-xlite
+		background-color: $color-accent
+		z-index: 99
+
+		&__content
+			position: relative
+			max-width: rem-calc(800)
+			margin: 0 auto
+
+		&__title
+			margin-bottom: rem-calc(30)
+			color: $color-bg-main
+
+		&__contact
+			+font($font-size-header)
+			display: block
+			color: $color-bg-main
+
+		&__logo--bullet
+			max-width: rem-calc(60)
+			margin-bottom: rem-calc(30)
+
+		&__pattern
+			position: fixed
+			bottom: 0
+			left: 0
+			right: 0
+			max-height: none
