@@ -1,8 +1,11 @@
 import displayScrollNavigation from './displayScrollNavigation';
-import manageElementsOnScroll from './manageElementsOnScroll';
+import { changeLogoOnScroll, moveBgPatternOnScroll } from './manageElementsOnScroll';
 
 document.addEventListener('DOMContentLoaded', () => {
     displayScrollNavigation();
+    changeLogoOnScroll();
+    moveBgPatternOnScroll();
 
-    window.addEventListener('scroll', manageElementsOnScroll);
+    window.addEventListener('scroll',changeLogoOnScroll);
+    window.addEventListener('scroll',moveBgPatternOnScroll);
 }, false);

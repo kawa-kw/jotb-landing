@@ -76,8 +76,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 document.addEventListener('DOMContentLoaded', () => {
     Object(__WEBPACK_IMPORTED_MODULE_0__displayScrollNavigation__["a" /* default */])();
+    Object(__WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["a" /* changeLogoOnScroll */])();
+    Object(__WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["b" /* moveBgPatternOnScroll */])();
 
-    window.addEventListener('scroll', __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["a" /* default */]);
+    window.addEventListener('scroll', __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["a" /* changeLogoOnScroll */]);
+    window.addEventListener('scroll', __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["b" /* moveBgPatternOnScroll */]);
 }, false);
 
 /***/ }),
@@ -118,18 +121,37 @@ let displayScrollNavigation = () => {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-let manageElementsOnScroll = () => {
-    let logo = document.querySelector('.js-main-logo');
-    let windowScrollTop = window.scrollY;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return changeLogoOnScroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return moveBgPatternOnScroll; });
+let logo = document.querySelector('.js-main-logo');
+let contactSectionOffset = document.querySelector('.js-section-contact').offsetTop;
+let windowheight = window.innerHeight;
+let bgPattern = document.querySelector('.js-bg-pattern');
 
+let changeLogoOnScroll = () => {
+    let windowScrollTop = window.scrollY;
     if (windowScrollTop >= 50) {
         logo.classList.add('logo-on-top');
-    } else if (windowScrollTop < 50) {
+    } else {
         logo.classList.remove('logo-on-top');
     }
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (manageElementsOnScroll);
+let moveBgPatternOnScroll = () => {
+    let windowScrollTop = window.scrollY;
+
+    if (windowScrollTop >= contactSectionOffset - windowheight) {
+        bgPattern.style.position = 'absolute';
+        bgPattern.style.bottom = 'auto';
+        bgPattern.style.top = `${-bgPattern.height}px`;
+    } else {
+        bgPattern.style.position = 'fixed';
+        bgPattern.style.bottom = '0';
+        bgPattern.style.top = 'auto';
+    }
+};
+
+
 
 /***/ })
 /******/ ]);
