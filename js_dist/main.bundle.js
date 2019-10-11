@@ -76,11 +76,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 document.addEventListener('DOMContentLoaded', () => {
     Object(__WEBPACK_IMPORTED_MODULE_0__displayScrollNavigation__["a" /* default */])();
-    Object(__WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["a" /* changeLogoOnScroll */])();
-    Object(__WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["b" /* moveBgPatternOnScroll */])();
+    Object(__WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["b" /* moveElementsOnScroll */])();
+    Object(__WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["a" /* moveBgPatternOnScroll */])();
 
-    window.addEventListener('scroll', __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["a" /* changeLogoOnScroll */]);
-    window.addEventListener('scroll', __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["b" /* moveBgPatternOnScroll */]);
+    window.addEventListener('scroll', __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["b" /* moveElementsOnScroll */]);
+    window.addEventListener('scroll', __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["a" /* moveBgPatternOnScroll */]);
 }, false);
 
 /***/ }),
@@ -121,26 +121,29 @@ let displayScrollNavigation = () => {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return changeLogoOnScroll; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return moveBgPatternOnScroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return moveBgPatternOnScroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return moveElementsOnScroll; });
 let logo = document.querySelector('.js-main-logo');
-let contactSectionOffset = document.querySelector('.js-section-contact').offsetTop;
+let sectionIntro = document.querySelector('.js-section-intro');
+let sectionContactOffset = document.querySelector('.js-section-contact').offsetTop;
 let windowheight = window.innerHeight;
 let bgPattern = document.querySelector('.js-bg-pattern');
 
-let changeLogoOnScroll = () => {
+let moveElementsOnScroll = () => {
     let windowScrollTop = window.scrollY;
     if (windowScrollTop >= 50) {
         logo.classList.add('logo-on-top');
+        sectionIntro.classList.add('intro-fade-out');
     } else {
         logo.classList.remove('logo-on-top');
+        sectionIntro.classList.remove('intro-fade-out');
     }
 };
 
 let moveBgPatternOnScroll = () => {
     let windowScrollTop = window.scrollY;
 
-    if (windowScrollTop >= contactSectionOffset - windowheight) {
+    if (windowScrollTop >= sectionContactOffset - windowheight) {
         bgPattern.style.position = 'absolute';
         bgPattern.style.bottom = 'auto';
         bgPattern.style.top = `${-bgPattern.height}px`;
