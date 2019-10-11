@@ -1,39 +1,101 @@
-.section-offer
+.section-projects
+	justify-content: flex-start
+	height: auto
+	padding-bottom: rem-calc(300)
+
 	&__list
-		margin: rem-calc(30) auto
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+		width: 0 auto
+
+		> *
+			width: rem-calc(300)
+			margin: rem-calc(20)
 
 		+media(s)
-			display: flex
-			flex-wrap: wrap
-			justify-content: center
-			width: rem-calc(400)
+			padding-left: rem-calc(60)
 
-		+media(m, 100px)
-			width: rem-calc(800)
+	&__link
+		display: block
 
-	&__list-item
+		&:hover
+			.section-projects__photo
+				+transition
+				height: 110%
+
+			.section-projects__photo-cover
+				+transition
+				opacity: 0
+
+	&__img
+		+transition
 		position: relative
+		width: rem-calc(300)
+		height: rem-calc(300)
+		overflow: hidden
+		box-shadow: 5px 5px 18px 3px rgba($color-black, .3)
+
+	&__photo,
+	&__photo-cover
+		+center
+		+transition
+
+	&__photo
+		height: 100%
+		max-width: none
+		max-height: none
+
+	&__photo-cover
+		height: 110%
+		width: 110%
+		max-height: none
+		max-width: none
+		z-index: 1
+
+	&__figcaption
+		display: flex
+		margin-top: rem-calc(30)
+		max-width: 100%
+
+		*
+			+font($family: $font-sans)
+			color: $color-accent
+
+	&__counter
 		display: flex
 		justify-content: center
-		align-items: center
-		width: rem-calc(150)
-		height: rem-calc(150)
-		border: 2px solid $color-accent
-		border-radius: rem-calc(5)
-		margin: 4rem 1rem
+		min-width: 30%
+		margin-right: rem-calc(10)
 
-		+media(s)
-			margin: 2rem 1rem
+		span
+			+font(rem-calc(80), 700, 1)
+			display: block
+			width: rem-calc(40)
+			position: relative
+			color: $color-accent
 
-	&__icon
-		+center(-40px, 50%, -50%, 0)
-		display: flex
-		justify-content: center
-		align-items: center
-		width: rem-calc(80)
-		height: rem-calc(80)
-		border-radius: 100%
-		background-color: $color-accent
+			+media(m, 100px)
+				&::after
+					content: ''
+					position: absolute
+					top: rem-calc(33)
+					left: rem-calc(8)
+					display: block
+					width: 5rem
+					height: 2rem
+					transform: rotate(-60deg)
+					background-color: $color-bg-main
+					z-index: 1
 
-		&::after
-			+fa-icon($fa-cogs, 21px, $color-black)
+	&__description
+		z-index: 2
+
+		p
+			&:first-child
+				+font(rem-calc(14))
+				margin-bottom: rem-calc(10)
+
+			&:last-child
+				+font(rem-calc(10), 700, 1.5)
