@@ -6,6 +6,10 @@
 		padding: 1rem
 		z-index: 101
 
+		&.nav-on-top
+			+transition($duration: .5s)
+			background-color: rgba($color-white, .6)
+
 	&__menu-list--header
 		display: flex
 		justify-content: center
@@ -34,5 +38,5 @@
 				width: rem-calc(180)
 
 		&.logo-on-top
-			width: rem-calc(100)
-			top: rem-calc(15)
+			width: rem-calc(60)
+			top: rem-calc(6)

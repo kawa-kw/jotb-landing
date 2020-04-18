@@ -1,11 +1,12 @@
 import displayScrollNavigation from './displayScrollNavigation';
-import { moveElementsOnScroll, moveBgPatternOnScroll } from './manageElementsOnScroll';
+import { moveElementsOnScroll } from './manageElementsOnScroll';
 
-document.addEventListener('DOMContentLoaded', () => {
-    displayScrollNavigation();
-    moveElementsOnScroll();
-    moveBgPatternOnScroll();
-
-    window.addEventListener('scroll',moveElementsOnScroll);
-    window.addEventListener('scroll',moveBgPatternOnScroll);
-}, false);
+document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+        displayScrollNavigation();
+        moveElementsOnScroll();
+        window.addEventListener('scroll', moveElementsOnScroll);
+    },
+    false
+);

@@ -53,6 +53,10 @@
 		max-height: none
 		max-width: none
 		z-index: 1
+		opacity: .6
+
+		+media(m)
+			opacity: 1
 
 	&__figcaption
 		display: flex
@@ -68,26 +72,6 @@
 		justify-content: center
 		min-width: 30%
 		margin-right: rem-calc(10)
-
-		span
-			+font(rem-calc(80), 700, 1)
-			display: block
-			width: rem-calc(40)
-			position: relative
-			color: $color-accent
-
-			+media(m, 100px)
-				&::after
-					content: ''
-					position: absolute
-					top: rem-calc(33)
-					left: rem-calc(8)
-					display: block
-					width: 5rem
-					height: 2rem
-					transform: rotate(-60deg)
-					background-color: $color-bg-main
-					z-index: 1
 
 	&__description
 		z-index: 2

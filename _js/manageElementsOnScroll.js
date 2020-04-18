@@ -1,11 +1,9 @@
-let logo = document.querySelector('.js-main-logo');
-let sectionIntro = document.querySelector('.js-section-intro');
-let sectionContactOffset = document.querySelector('.js-section-contact').offsetTop;
-let windowheight = window.innerHeight;
-let bgPattern = document.querySelector('.js-bg-pattern');
+const logo = document.querySelector('.js-main-logo');
+const nav = document.querySelector('.js-nav');
+const sectionIntro = document.querySelector('.js-section-intro');
 
-let moveElementsOnScroll = () => {
-    let windowScrollTop = window.scrollY;
+const moveElementsOnScroll = () => {
+    const windowScrollTop = window.scrollY;
     if (windowScrollTop >= 50) {
         logo.classList.add('logo-on-top');
         sectionIntro.classList.add('intro-fade-out');
@@ -13,22 +11,12 @@ let moveElementsOnScroll = () => {
         logo.classList.remove('logo-on-top');
         sectionIntro.classList.remove('intro-fade-out');
     }
-};
 
-let moveBgPatternOnScroll = () => {
-    let windowScrollTop = window.scrollY;
-
-    if (windowScrollTop >= sectionContactOffset - windowheight) {
-        bgPattern.style.position = 'absolute';
-        bgPattern.style.bottom = 'auto';
-        bgPattern.style.top = `${-bgPattern.height}px`;
+    if (windowScrollTop >= 650) {
+        nav.classList.add('nav-on-top');
     } else {
-        bgPattern.style.position = 'fixed';
-        bgPattern.style.bottom = '0';
-        bgPattern.style.top = 'auto';
+        nav.classList.remove('nav-on-top');
     }
 };
 
-
-
-export {moveBgPatternOnScroll, moveElementsOnScroll};
+export { moveElementsOnScroll };

@@ -76,11 +76,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 document.addEventListener('DOMContentLoaded', () => {
     Object(__WEBPACK_IMPORTED_MODULE_0__displayScrollNavigation__["a" /* default */])();
-    Object(__WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["b" /* moveElementsOnScroll */])();
-    Object(__WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["a" /* moveBgPatternOnScroll */])();
-
-    window.addEventListener('scroll', __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["b" /* moveElementsOnScroll */]);
-    window.addEventListener('scroll', __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["a" /* moveBgPatternOnScroll */]);
+    Object(__WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["a" /* moveElementsOnScroll */])();
+    window.addEventListener('scroll', __WEBPACK_IMPORTED_MODULE_1__manageElementsOnScroll__["a" /* moveElementsOnScroll */]);
 }, false);
 
 /***/ }),
@@ -121,16 +118,13 @@ let displayScrollNavigation = () => {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return moveBgPatternOnScroll; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return moveElementsOnScroll; });
-let logo = document.querySelector('.js-main-logo');
-let sectionIntro = document.querySelector('.js-section-intro');
-let sectionContactOffset = document.querySelector('.js-section-contact').offsetTop;
-let windowheight = window.innerHeight;
-let bgPattern = document.querySelector('.js-bg-pattern');
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return moveElementsOnScroll; });
+const logo = document.querySelector('.js-main-logo');
+const nav = document.querySelector('.js-nav');
+const sectionIntro = document.querySelector('.js-section-intro');
 
-let moveElementsOnScroll = () => {
-    let windowScrollTop = window.scrollY;
+const moveElementsOnScroll = () => {
+    const windowScrollTop = window.scrollY;
     if (windowScrollTop >= 50) {
         logo.classList.add('logo-on-top');
         sectionIntro.classList.add('intro-fade-out');
@@ -138,19 +132,11 @@ let moveElementsOnScroll = () => {
         logo.classList.remove('logo-on-top');
         sectionIntro.classList.remove('intro-fade-out');
     }
-};
 
-let moveBgPatternOnScroll = () => {
-    let windowScrollTop = window.scrollY;
-
-    if (windowScrollTop >= sectionContactOffset - windowheight) {
-        bgPattern.style.position = 'absolute';
-        bgPattern.style.bottom = 'auto';
-        bgPattern.style.top = `${-bgPattern.height}px`;
+    if (windowScrollTop >= 650) {
+        nav.classList.add('nav-on-top');
     } else {
-        bgPattern.style.position = 'fixed';
-        bgPattern.style.bottom = '0';
-        bgPattern.style.top = 'auto';
+        nav.classList.remove('nav-on-top');
     }
 };
 
