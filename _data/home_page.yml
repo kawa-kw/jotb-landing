@@ -1,0 +1,48 @@
+
+-   href: projekt_kartka_slubna
+    mainImgSrc: proj1/1.jpeg
+    mainImgAlt: Kartka ślubna
+    mainImgCover: tail_1.svg
+    number: 1.svg
+    title: Kartka ślubna
+    short: Kartka i piękne pudełko zamiast koperty.
+
+-   href: projekt_album
+    mainImgSrc: proj2/9.jpeg
+    mainImgAlt: "Album na zdjęcia"
+    mainImgCover: tail_2.svg
+    number: 2.svg
+    title: Album na zdjęcia
+    short: Pamiątka do wklejania zdjęć, notatek i innych ważnych wpisów.
+
+-   href: projekt_ksiega_gosci
+    mainImgSrc: proj3/1.jpeg
+    mainImgAlt: "Album na zdjęcia"
+    mainImgCover: tail_3.svg
+    number: 3.svg
+    title: Księga gości
+    short: Świetny prezent z okazji zamieszkania w nowym domu.
+
+-   href: projekt_kartka_okazyjna
+    mainImgSrc: proj4/1.jpeg
+    mainImgAlt: "Kartka okazyjna"
+    mainImgCover: tail_4.svg
+    number: 4.svg
+    title: Kartka okazyjna
+    short: Kartka z indywidualnymi życzeniami.
+
+-   href: projekt_kartka_okazyjna_2
+    mainImgSrc: proj5/1.jpeg
+    mainImgAlt: "Kartka okazyjna"
+    mainImgCover: tail_5.svg
+    number: 5.svg
+    title: Kartka okazyjna
+    short: Kartka z indywidualnymi życzeniami.
+
+-   href: projekt_metryczka
+    mainImgSrc: proj6/3.jpeg
+    mainImgAlt: "Metryczki noworodków"
+    mainImgCover: tail_6.svg
+    number: 6.svg
+    title: Metryczki noworodków
+    short: Wspaniała pamiątka z okazji urodzin dziecka.

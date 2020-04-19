@@ -24,114 +24,25 @@ slick_carousel: false
 		</section>
 		<section id="projects" data-name="Projekty" class="section section-projects js-section">
 			<ul class="section-projects__list js-projects-carousel">
-				<li>
-					<a href="{{ site.baseurl }}projekt_kartka_slubna" class="section-projects__link">
-						<figure class="section-projects__img">
-							<img src="{{ site.baseurl }}img/proj1/1.jpeg" class="section-projects__photo"
-								alt="Okładka projektu 1">
-							<img src="{{ site.baseurl }}img/tail_1.svg" class="section-projects__photo-cover" alt="">
-						</figure>
-						<figcaption class="section-projects__figcaption">
-							<p class="section-projects__counter">
-								<img src="{{ site.baseurl }}img/no/1.svg" alt="">
-							</p>
-							<div class="section-projects__description">
-								<p>Kartka ślubna</p>
-								<p>Kartka i piękne pudełko zamiast koperty.</p>
-							</div>
-						</figcaption>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="section-projects__link">
-						<figure class="section-projects__img">
-							<img src="{{ site.baseurl }}img/proj2/9.jpeg" class="section-projects__photo"
-								alt="Okładka projektu 2">
-							<img src="{{ site.baseurl }}img/tail_2.svg" class="section-projects__photo-cover" alt="">
-						</figure>
-						<figcaption class="section-projects__figcaption">
-							<p class="section-projects__counter">
-								<img src="{{ site.baseurl }}img/no/2.svg" alt="">
-							</p>
-							<div class="section-projects__description">
-								<p>Album na zdjęcia</p>
-								<p>Pamiątka do wklejania zdjęć, notatek i innych ważnych wpisów.</p>
-							</div>
-						</figcaption>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="section-projects__link">
-						<figure class="section-projects__img">
-							<img src="{{ site.baseurl }}img/proj3/1.jpeg" class="section-projects__photo"
-								alt="Okładka projektu 3">
-							<img src="{{ site.baseurl }}img/tail_3.svg" class="section-projects__photo-cover" alt="">
-						</figure>
-						<figcaption class="section-projects__figcaption">
-							<p class="section-projects__counter">
-								<img src="{{ site.baseurl }}img/no/3.svg" alt="">
-							</p>
-							<div class="section-projects__description">
-								<p>Księga gości</p>
-								<p>Świetny prezent z okazji zamieszkania w nowym domu.</p>
-							</div>
-						</figcaption>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="section-projects__link">
-						<figure class="section-projects__img">
-							<img src="{{ site.baseurl }}img/proj4/1.jpeg" class="section-projects__photo"
-								alt="Okładka projektu 4">
-							<img src="{{ site.baseurl }}img/tail_4.svg" class="section-projects__photo-cover" alt="">
-						</figure>
-						<figcaption class="section-projects__figcaption">
-							<p class="section-projects__counter">
-								<img src="{{ site.baseurl }}img/no/4.svg" alt="">
-							</p>
-							<div class="section-projects__description">
-								<p>Kartka okazyjna</p>
-								<p>Kartka z indywidualnymi życzeniami.</p>
-							</div>
-						</figcaption>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="section-projects__link">
-						<figure class="section-projects__img">
-							<img src="{{ site.baseurl }}img/proj5/1.jpeg" class="section-projects__photo"
-								alt="Okładka projektu 5">
-							<img src="{{ site.baseurl }}img/tail_5.svg" class="section-projects__photo-cover" alt="">
-						</figure>
-						<figcaption class="section-projects__figcaption">
-							<p class="section-projects__counter">
-								<img src="{{ site.baseurl }}img/no/5.svg" alt="">
-							</p>
-							<div class="section-projects__description">
-								<p>Kartka okazyjna</p>
-								<p>Kartka z indywidualnymi życzeniami.</p>
-							</div>
-						</figcaption>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="section-projects__link">
-						<figure class="section-projects__img">
-							<img src="{{ site.baseurl }}img/proj6/3.jpeg" class="section-projects__photo"
-								alt="Okładka projektu 6">
-							<img src="{{ site.baseurl }}img/tail_6.svg" class="section-projects__photo-cover" alt="">
-						</figure>
-						<figcaption class="section-projects__figcaption">
-							<p class="section-projects__counter">
-								<img src="{{ site.baseurl }}img/no/6.svg" alt="">
-							</p>
-							<div class="section-projects__description">
-								<p>Metryczki noworodków</p>
-								<p>Wspaniała pamiątka z okazji urodzin dziecka.</p>
-							</div>
-						</figcaption>
-					</a>
-				</li>
+				{% for item in site.data.home_page %}
+					<li>
+						<a href="{{ site.baseurl }}{{ item.href }}" class="section-projects__link">
+							<figure class="section-projects__img">
+								<img src="{{ site.baseurl }}img/{{ item.mainImgSrc }}" class="section-projects__photo" alt="{{ item.mainImgAlt }}">
+								<img src="{{ site.baseurl }}img/{{ item.mainImgCover }}" class="section-projects__photo-cover" alt="">
+							</figure>
+							<figcaption class="section-projects__figcaption">
+								<p class="section-projects__counter">
+									<img src="{{ site.baseurl }}img/no/{{ item.number }}" alt="">
+								</p>
+								<div class="section-projects__description">
+									<p>{{ item.title }}</p>
+									<p>{{ item.short }}</p>
+								</div>
+							</figcaption>
+						</a>
+					</li>
+				{% endfor %}
 			</ul>
 		</section>
 	</section>
