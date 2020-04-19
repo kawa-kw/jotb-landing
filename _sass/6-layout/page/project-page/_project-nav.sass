@@ -1,0 +1,31 @@
+.project-nav
+	background-image: linear-gradient(rgba($color-accent, .5), rgba($color-accent, 0))
+	&--header
+		position: fixed
+		top: 0
+		width: 100%
+		padding: .38rem 1rem  //6px
+		z-index: 101
+
+		&.nav-on-top
+			+transition($duration: 0.5s)
+			background-color: rgba($color-bg-main, .8)
+
+	&__menu-list--header
+		display: flex
+		justify-content: center
+		align-items: center
+
+		.project-nav__logo
+			margin: 0 rem-calc(45)
+
+			+media(m)
+				margin: 0 rem-calc(140)
+
+	&__link
+		+font($font-size-short, $font-bold-weight, $family: $font-sans)
+		display: block
+		color: $color-bg-main
+
+		&--logo
+			width: rem-calc(60)

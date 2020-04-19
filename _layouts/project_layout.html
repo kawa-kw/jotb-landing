@@ -1,0 +1,27 @@
+---
+title: Projekt
+layout: default
+
+---
+
+<nav class="project-nav project-nav--header">
+	<ul class="project-nav__menu-list project-nav__menu-list--header">
+		<li><a href="/#projects" class="project-nav__link">Projekty</a></li>
+		<li class="project-nav__logo">
+			<a href="/" class="project-nav__link project-nav__link--logo">
+				<img src="{{ site.baseurl }}img/logo-lite.svg" alt="Jot.B">
+			</a>
+		</li>
+		<li><a href="#contact" class="project-nav__link">Kontakt</a></li>
+	</ul>
+</nav>
+<main class="main project">
+	<header class="project__header">
+		<img src="{{ site.baseurl }}img/{{ page.img_src }}" class="project__main-img" alt="Kartka ślubna z pudełkiem">
+		<div class="project__title">
+			<h2 class="project__title--main">{{ page.main_header }}</h2>
+			<h3 class="project__title--secondary">{{ page.secondary_header }}</h3>
+		</div>
+	</header>
+	{{ content }}
+</main>

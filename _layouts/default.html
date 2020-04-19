@@ -1,68 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>{% if page.title %}{{ page.title }}{% endif %}</title>
+	<title>JotB{% if page.title %} - {{ page.title }}{% endif %}</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 	<link rel="icon" ttype="image/x-icon" href="{{ site.baseurl }}img/favicon.ico">
+
+	{% if page.slick_carousel %}
+		<link rel="stylesheet" href="{{ site.baseurl }}css/slick.css">
+		<link rel="stylesheet" href="{{ site.baseurl }}css/slick-theme.css">
+	{% endif %}
 	<link rel="stylesheet" href="{{ site.baseurl }}css/base.css">
 </head>
 
 <body>
-	<header>
-		<nav class="main-nav main-nav--header js-nav">
-			<ul class="main-nav__menu-list main-nav__menu-list--header">
-				<li><a href="#projects" class="main-nav__link">Projekty</a></li>
-				<li class="main-nav__logo">
-					<a href="/" class="main-nav__link main-nav__link--logo js-main-logo">
-						<img src="{{ site.baseurl }}img/logo.svg" alt="Jot.B">
-					</a>
-				</li>
-				<li><a href="#contact" class="main-nav__link">Kontakt</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main class="main">
-		<section class="main__content">
-			{{ content }}
+	<section class="wrapper">
+		{{ content }}
+		<img src="{{ site.baseurl }}img/bottom-pattern.svg" class="wrapper__pattern" alt="">
+	</section>
+	<footer>
+		<section id="contact" data-name="Kontakt" class="main-footer--full js-section js-section-contact">
+			<div class="main-footer--full__content">
+				<img src="{{ site.baseurl }}img/logo-bullet.svg" class="main-footer--full__logo--bullet" alt="Jot.B">
+				<h2 class="main-footer--full__title">Napisz do mnie</h2>
+				<a href="mailto:jotkropkab@gmail.com?subject=Kontakt ze strony jotkropkab.pl"
+					class="main-footer--full__contact">jotkropkab@gmail.com</a>
+			</div>
 		</section>
-		<nav class="main__nav-scroll">
-			<ul id="js-scroll-nav" class="main__nav-scroll-list"></ul>
-		</nav>
-	</main>
-	<footer class="main-footer">
-		<nav class="main-footer__nav">
-			<p class="main-footer__copyright">&#169; Jot.B, 2019</p>
-			<ul class="main-footer__menu-list">
-				<li class="main-footer__item">
-					<a href="#contact" class="main-footer__icon main-footer__adress" title="Kontakt"></a>
-				</li>
-				<li class="main-footer__item">
-					<a href="#" class="main-footer__icon main-footer__facebook" title="Facebook"></a>
-				</li>
-			</ul>
-		</nav>
+		<section class="main-footer">
+			<nav class="main-footer__nav">
+				<p class="main-footer__copyright">&#169; Jot.B, 2020</p>
+				<ul class="main-footer__menu-list">
+					<li class="main-footer__item">
+						<a href="#contact" class="main-footer__icon main-footer__adress" title="Kontakt"></a>
+					</li>
+					<li class="main-footer__item">
+						<a href="#" class="main-footer__icon main-footer__facebook" title="Facebook"></a>
+					</li>
+				</ul>
+			</nav>
+		</section>
 	</footer>
 
 	<!-- Scripts -->
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="{{ site.baseurl }}js_dist/slick.min.js"></script>
-	<script type="text/javascript" src="{{ site.baseurl }}js_dist/main.bundle.js"></script>
+	{% if page.slick_carousel %}
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="{{ site.baseurl }}js_dist/slick.min.js"></script>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-		    $('.js-projects-carousel').slick({
-		        // accessibility: true,
-		        dots: true,
-		        // infinite: true,
-		        speed: 300,
-		        slidesToShow: 3,
-		        slidesToScroll: 3,
-		    });
-		});
-	</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.js-projects-carousel').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: true,
+					fade: true,
+					adaptiveHeight: true,
+					asNavFor: '.js-projects-carousel-nav',
+				});
+				$('.js-projects-carousel-nav').slick({
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					asNavFor: '.js-projects-carousel',
+					dots: false,
+					arrows: false,
+					centerMode: true,
+					focusOnSelect: true,
+					variableWidth: true,
+				});
+			});
+		</script>
+	{% endif %}
+
+	{% if page.slick_carousel == false %}
+		<script type="text/javascript" src="{{ site.baseurl }}js_dist/main.bundle.js"></script>
+	{% endif %}
 </body>
 </html>

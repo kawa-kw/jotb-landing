@@ -1,0 +1,67 @@
+.project
+	flex-direction: column
+
+	&__header
+		position: relative
+		display: flex
+		justify-content: center
+		width: 100vw
+		height: 100vh
+		overflow: hidden
+		text-align: center
+
+		&::after
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-image: radial-gradient(farthest-corner at 40px 40px, rgba($color-bg-med, .3) 0%, rgba($color-bg-dark, .9) 90%)
+
+	&__main-img
+		+center
+		position: absolute
+		min-width: 100%
+		min-height: 100%
+		max-width: none
+		max-height: none
+
+	&__title
+		position: absolute
+		bottom: 30%
+		right: 2rem
+		text-align: right
+		color: $color-bg-main
+		z-index: 1
+
+	&__title--main
+		+font($font-size-header-main, $font-bold-weight)
+		margin-bottom: 2rem
+
+	&__title--secondary
+		+font($font-size-header, $family: $font-sans)
+
+.project-gallery
+	&__header
+		+font($font-size-header-main, $font-bold-weight, $line-height-header)
+		margin: 3.13rem auto
+		text-align: center
+
+	&__list
+		width: 80%
+		max-width: 62.5rem  //1000px
+		margin: .31rem auto  //5px
+
+		.slick-arrow::before
+			color: $color-accent
+
+		&--nav
+			margin-bottom: 3.13rem  //50px
+
+			.slick-slide
+				height: 6.25rem  //100px
+				margin: .31rem  //5px
+
+			.slick-current
+				border: 3px solid $color-accent

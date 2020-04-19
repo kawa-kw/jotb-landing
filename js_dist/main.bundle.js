@@ -85,11 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-let displayScrollNavigation = () => {
-    let sectionsArray = document.getElementsByClassName('js-section');
-    let scrollNav = document.getElementById('js-scroll-nav');
+const displayScrollNavigation = () => {
+    const sectionsArray = document.getElementsByClassName('js-section');
+    const scrollNav = document.getElementById('js-scroll-nav');
 
-    for (let section of sectionsArray) {
+    for (const section of sectionsArray) {
         const navElement = document.createElement('li');
         navElement.className = 'main__nav-scroll-element';
 
@@ -108,7 +108,7 @@ let displayScrollNavigation = () => {
         navElement.appendChild(navLink);
         // Append <li> to <ul>
         scrollNav.appendChild(navElement);
-    };
+    }
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (displayScrollNavigation);
