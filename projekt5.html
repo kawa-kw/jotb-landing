@@ -3,7 +3,7 @@ title: Metryczki noworodków
 main_header: Metryczki noworodków
 secondary_header: Wspaniała pamiątka z okazji urodzin dziecka.
 layout: project_layout
-img_src: proj6/1.jpeg
+img_src: proj5/1.jpeg
 permalink: /projekt-metryczka/
 slick_carousel: true
 ---
@@ -11,13 +11,13 @@ slick_carousel: true
 <section class="project-gallery">
 	<h4 class="project-gallery__header">Galeria</h4>
 	<ul class="project-gallery__list project-gallery__list--main js-projects-carousel">
-		<li><img src="{{ site.baseurl }}img/proj6/1.jpeg" alt="Metryczka noworodka"></li>
-		<li><img src="{{ site.baseurl }}img/proj6/2.jpeg" alt="Metryczka noworodka"></li>
-		<li><img src="{{ site.baseurl }}img/proj6/3.jpeg" alt="Metryczka noworodka"></li>
+		{% for i in (1..3) %}
+			<li><img src="{{ site.baseurl }}img/proj5/{{ i }}.jpeg" alt="Metryczka noworodka"></li>
+		{% endfor %}
 	</ul>
 	<ul class="project-gallery__list project-gallery__list--nav js-projects-carousel-nav">
-		<li><img src="{{ site.baseurl }}img/proj6/1.jpeg" alt="Metryczka noworodka"></li>
-		<li><img src="{{ site.baseurl }}img/proj6/2.jpeg" alt="Metryczka noworodka"></li>
-		<li><img src="{{ site.baseurl }}img/proj6/3.jpeg" alt="Metryczka noworodka"></li>
+		{% for i in (1..3) %}
+			<li><img src="{{ site.baseurl }}img/proj5/{{ i }}.jpeg" alt="Metryczka noworodka"></li>
+		{% endfor %}
 	</ul>
 </section>

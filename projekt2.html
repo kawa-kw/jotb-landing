@@ -11,23 +11,13 @@ slick_carousel: true
 <section class="project-gallery">
 	<h4 class="project-gallery__header">Galeria</h4>
 	<ul class="project-gallery__list project-gallery__list--main js-projects-carousel">
-		<li><img src="{{ site.baseurl }}img/proj2/2.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/3.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/4.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/5.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/6.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/7.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/8.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/9.jpeg" alt="Album na zdjęcia"></li>
+		{% for i in (2..9) %}
+			<li><img src="{{ site.baseurl }}img/proj2/{{ i }}.jpeg" alt="Album na zdjęcia"></li>
+		{% endfor %}
 	</ul>
 	<ul class="project-gallery__list project-gallery__list--nav js-projects-carousel-nav">
-		<li><img src="{{ site.baseurl }}img/proj2/2.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/3.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/4.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/5.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/6.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/7.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/8.jpeg" alt="Album na zdjęcia"></li>
-		<li><img src="{{ site.baseurl }}img/proj2/9.jpeg" alt="Album na zdjęcia"></li>
+		{% for i in (2..9) %}
+			<li><img src="{{ site.baseurl }}img/proj2/{{ i }}.jpeg" alt="Album na zdjęcia"></li>
+		{% endfor %}
 	</ul>
 </section>

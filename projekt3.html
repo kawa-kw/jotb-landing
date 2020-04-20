@@ -11,19 +11,13 @@ slick_carousel: true
 <section class="project-gallery">
 	<h4 class="project-gallery__header">Galeria</h4>
 	<ul class="project-gallery__list project-gallery__list--main js-projects-carousel">
-		<li><img src="{{ site.baseurl }}img/proj3/1.jpeg" alt="Księga gosci"></li>
-		<li><img src="{{ site.baseurl }}img/proj3/2.jpeg" alt="Księga gosci"></li>
-		<li><img src="{{ site.baseurl }}img/proj3/3.jpeg" alt="Księga gosci"></li>
-		<li><img src="{{ site.baseurl }}img/proj3/4.jpeg" alt="Księga gosci"></li>
-		<li><img src="{{ site.baseurl }}img/proj3/5.jpeg" alt="Księga gosci"></li>
-		<li><img src="{{ site.baseurl }}img/proj3/6.jpeg" alt="Księga gosci"></li>
+		{% for i in (1..6) %}
+			<li><img src="{{ site.baseurl }}img/proj3/{{ i }}.jpeg" alt="Księga gości"></li>
+		{% endfor %}
 	</ul>
 	<ul class="project-gallery__list project-gallery__list--nav js-projects-carousel-nav">
-		<li><img src="{{ site.baseurl }}img/proj3/1.jpeg" alt="Księga gosci"></li>
-		<li><img src="{{ site.baseurl }}img/proj3/2.jpeg" alt="Księga gosci"></li>
-		<li><img src="{{ site.baseurl }}img/proj3/3.jpeg" alt="Księga gosci"></li>
-		<li><img src="{{ site.baseurl }}img/proj3/4.jpeg" alt="Księga gosci"></li>
-		<li><img src="{{ site.baseurl }}img/proj3/5.jpeg" alt="Księga gosci"></li>
-		<li><img src="{{ site.baseurl }}img/proj3/6.jpeg" alt="Księga gosci"></li>
+		{% for i in (1..6) %}
+			<li><img src="{{ site.baseurl }}img/proj3/{{ i }}.jpeg" alt="Księga gości"></li>
+		{% endfor %}
 	</ul>
 </section>
