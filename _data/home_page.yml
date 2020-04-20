@@ -23,18 +23,34 @@
     title: Księga gości
     short: Świetny prezent z okazji zamieszkania w nowym domu.
 
--   href: projekt-kartka-okazyjna
-    mainImgSrc: proj4/1.jpeg
-    mainImgAlt: "Kartka okazyjna"
+-   href: projekt-domek-lol
+    mainImgSrc: proj4/8.jpg
+    mainImgAlt: "Domek dla LOL Surprise"
     mainImgCover: tail_4.svg
     number: 4.svg
+    title: Domek dla LOL Surprise
+    short: Wspaniała zabawka dla miłośniczek kolekcji LOL Surprise.
+
+-   href: projekt-kartka-okazyjna
+    mainImgSrc: proj5/1.jpeg
+    mainImgAlt: "Kartka okazyjna"
+    mainImgCover: tail_5.svg
+    number: 5.svg
     title: Kartka okazyjna
     short: Kartka z indywidualnymi życzeniami.
 
 -   href: projekt-metryczka
-    mainImgSrc: proj5/3.jpeg
+    mainImgSrc: proj6/3.jpeg
     mainImgAlt: "Metryczki noworodków"
-    mainImgCover: tail_5.svg
-    number: 5.svg
+    mainImgCover: tail_6.svg
+    number: 6.svg
     title: Metryczki noworodków
     short: Wspaniała pamiątka z okazji urodzin dziecka.
+
+-   href: projekt-organizer
+    mainImgSrc: proj7/3.JPG
+    mainImgAlt: "Organizer na biurko"
+    mainImgCover: tail_1.svg
+    number: 7.svg
+    title: Organizer na biurko
+    short: Wszystkie drobiazgi pięknie posegregowane.

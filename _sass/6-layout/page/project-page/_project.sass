@@ -17,7 +17,7 @@
 			bottom: 0
 			left: 0
 			right: 0
-			background-image: radial-gradient(farthest-corner at 40px 40px, rgba($color-bg-med, .3) 0%, rgba($color-bg-dark, .9) 90%)
+			background-image: radial-gradient(farthest-corner at 40px 40px, rgba($color-bg-med, .3) 0%, rgba($color-bg-dark, .95) 50%)
 
 	&__main-img
 		+center
@@ -42,6 +42,24 @@
 	&__title--secondary
 		+font($font-size-header, $family: $font-sans)
 
+	&__scroll-indicator
+		//+center
+		position: absolute
+		top: auto
+		bottom: 15%
+		display: block
+		z-index: 2
+		animation: pulse-n-move 2s ease-out .5s infinite
+
+		&::before
+			+fa-icon($fa-long-arrow-down , 1.75rem, rgba($color-bg-main, .4))
+			display: block
+			width: 2.19rem  //35px
+			height: 3.44rem  //55px
+			border: 2px solid rgba($color-bg-main, .4)
+			border-radius: .94rem  //15px
+
+
 .project-gallery
 	&__header
 		+font($font-size-header-main, $font-bold-weight, $line-height-header)
@@ -53,8 +71,19 @@
 		max-width: 50rem  //800px
 		margin: .31rem auto  //5px
 
-		.slick-arrow::before
-			color: $color-accent
+		.slick-arrow
+			height: 100%
+			width: 1.88rem  //30px
+			background-color: rgba($color-accent, .05)
+
+			&::before
+				color: $color-accent
+
+		.slick-prev
+			left: -2.5rem  //-40px
+
+		.slick-next
+			right: -2.5rem  //-40px
 
 		&--nav
 			margin-bottom: 3.13rem  //50px
@@ -65,3 +94,14 @@
 
 			.slick-current
 				border: 3px solid $color-accent
+
+
+@keyframes pulse-n-move
+	0%
+		transform: translateY(0)
+
+	50%
+		transform: translateY(5px)
+
+	100%
+		transform: translateY(10px)

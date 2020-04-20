@@ -17,11 +17,12 @@ layout: default
 </nav>
 <main class="main project">
 	<header class="project__header">
-		<img src="{{ site.baseurl }}img/{{ page.img_src }}" class="project__main-img" alt="{{ page.main_header }}">
+		<img src="{{ site.baseurl }}img/{{ page.mainImgSrc }}" class="project__main-img" alt="{{ page.main_header }}">
 		<div class="project__title">
-			<h2 class="project__title--main">{{ page.main_header }}</h2>
-			<h3 class="project__title--secondary">{{ page.secondary_header }}</h3>
+			<h2 class="project__title--main">{{ page.title }}</h2>
+			<h3 class="project__title--secondary">{{ page.short }}</h3>
 		</div>
+		<span class="project__scroll-indicator"></span>
 	</header>
 	{{ content }}
 </main>
