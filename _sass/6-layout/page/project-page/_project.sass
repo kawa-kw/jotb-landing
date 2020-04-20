@@ -22,10 +22,16 @@
 	&__main-img
 		+center
 		position: absolute
-		min-width: 100%
-		min-height: 100%
 		max-width: none
 		max-height: none
+
+		+media(0, $orientation: portrait)
+			height: 100%
+			width: auto
+
+		+media(0, $orientation: landscape)
+			width: 100%
+			height: auto
 
 	&__title
 		position: absolute
